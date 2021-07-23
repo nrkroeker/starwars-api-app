@@ -16,7 +16,7 @@ interface StarshipsTableProps {
 function StarshipsTable({ data }: StarshipsTableProps) {
     return(
         <TableContainer component={Paper}>
-            <Table aria-label="starships table" className="starshipsTable">
+            <Table aria-label="starships table" className="starships-table">
                 <TableHead>
                     <TableRow>
                         <TableCell>Name</TableCell>

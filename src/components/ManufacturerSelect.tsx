@@ -19,18 +19,20 @@ function ManufacturerSelect({ value, onChange, options }: ManufacturerSelectProp
     }
 
     return (
-        <FormControl className="formControl">
-            <InputLabel id="manufacturer-select-label">Manufacturer</InputLabel>
-            <Select
-                value={value}
-                onChange={handleChange}
-                labelId="manufacturer-select-label"
-            >
-                {options.map(option => (
-                    <MenuItem key={option} value={option}>{option}</MenuItem>
-                ))}
-            </Select>
-        </FormControl>
+        <div className="select-container">
+            <FormControl className="form-control">
+                <InputLabel id="manufacturer-select-label">Manufacturer</InputLabel>
+                <Select
+                    value={value}
+                    onChange={handleChange}
+                    labelId="manufacturer-select-label"
+                >
+                    {options.map(option => (
+                        <MenuItem key={option} value={option}>{option}</MenuItem>
+                    ))}
+                </Select>
+            </FormControl>
+        </div>
     );
 }
 

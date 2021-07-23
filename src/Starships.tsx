@@ -11,7 +11,7 @@ function Starships() {
   useEffect(() => {
     getStarships()
       .then((data: any) => setStarships(data))
-  })
+  }, [])
 
   let manufacturers = starships
     .map(ship => ship.manufacturer.replace(", ", ",").split(","))
@@ -21,7 +21,7 @@ function Starships() {
   const filteredShips = starships.filter(ship => ship.manufacturer.includes(selectedManufacturer));
   
   return (
-    <div className="resourceContainer">
+    <div className="resource-container">
         <ManufacturerSelect value={selectedManufacturer} onChange={setSelectedManufacturer} options={manufacturers} />
         <StarshipsTable data={filteredShips} />
     </div>
